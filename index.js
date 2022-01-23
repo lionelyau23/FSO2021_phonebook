@@ -1,4 +1,5 @@
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
 
 let data = [
@@ -25,6 +26,7 @@ let data = [
 ]
 
 app.use(express.json())
+app.use(morgan('combined'))
 
 app.get('/api/persons', (request, response) => {
     response.json(data)
