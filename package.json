@@ -1,0 +1,23 @@
+{
+  "name": "phonebook",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lionelyau23/FSO2021_phonebook.git"
+  },
+  "author": "lionelyau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lionelyau23/FSO2021_phonebook/issues"
+  },
+  "homepage": "https://github.com/lionelyau23/FSO2021_phonebook#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
