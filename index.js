@@ -59,6 +59,20 @@ app.delete('/api/persons/:id', (request, response) => {
 app.post('/api/persons', (request, response) => {
     const body = request.body
 
+    if (!body.name) {
+        return response.status(404).json({
+            error: "name is missing"
+        })
+    } else if (!body.number) {
+        return response.status(404).json({
+            error: "number is missing"
+        })
+    } else if (data.find(p => p.name === body.name)) {
+        return response.status(404).json({
+            error: `${body.name} is already in the phonebook`
+        })
+    }
+
     const person = {
         name: body.name,
         number: body.number,
