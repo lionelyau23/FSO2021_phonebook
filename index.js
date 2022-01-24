@@ -26,7 +26,13 @@ let data = [
 ]
 
 app.use(express.json())
-app.use(morgan('combined'))
+
+morgan.token('content', (request, response) => (
+        JSON.stringify(request.body)
+    )
+)
+
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :content'))
 
 app.get('/api/persons', (request, response) => {
     response.json(data)
